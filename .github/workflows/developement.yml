@@ -26,14 +26,6 @@ jobs:
           passphrase: 270897
           host: 51.178.30.100
           username: julien
-          password: 270897
           port: 22
           source: "build/"
           target: "/home/julien/web"
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rltgoDzvO -p 270897"
-          REMOTE_HOST: 51.178.30.100
-          REMOTE_USER: julien
-          SOURCE: "build/"
-          TARGET: "/home/julien/web"
