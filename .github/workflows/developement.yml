@@ -25,6 +25,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "src/"
-          REMOTE_HOST: 51.178.30.100
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: julien
           TARGET: /home/julien/web
