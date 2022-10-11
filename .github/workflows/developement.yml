@@ -23,7 +23,7 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          know_hosts: ${{ secrets.SSH_HOST }}
+          known_hosts: ${{ secrets.SSH_HOST }}
       - name: PULL project
         run: ssh julien@51.178.30.100 "cd /home/julien/web/ && /usr/bin/git/build pull origin master"
 
