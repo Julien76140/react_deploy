@@ -24,7 +24,7 @@ jobs:
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: ${{ secrets.SSH_HOST }}
-          password: 270897
-          run: ssh julien@51.178.30.100 "cd /home/julien/web/ && /usr/bin/git/build/ pull origin master"
-
+          password: ${{ secrets.PASSWORD }}
+      - name: PULL project
+        run: ssh julien@51.178.30.100 "cd /home/julien/web/ && /usr/bin/git/build/ pull origin master"
 
