@@ -20,11 +20,11 @@ jobs:
       - run: npm run build
       - run: npm run test
       - name: Deploy to server
-        uses: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@v2.1.4
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzvO"
-          SOURCE: "build/"
-          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_HOST: 51.178.30.100
           REMOTE_USER: julien
+          SOURCE: "build/"
           TARGET: /home/julien/web
