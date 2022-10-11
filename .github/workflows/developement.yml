@@ -23,8 +23,8 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.4
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rltgoDzvO"
+          ARGS: "-rltgoDzvO -p 270897"
           REMOTE_HOST: 51.178.30.100
           REMOTE_USER: julien
           SOURCE: "build/"
-          TARGET: /home/julien/web
+          TARGET: "/home/julien/web"
