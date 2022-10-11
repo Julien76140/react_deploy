@@ -1,4 +1,4 @@
-name: React julien development
+name: React julien production
 
 on:
   push:
