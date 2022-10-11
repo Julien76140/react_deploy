@@ -10,10 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: production Code
+        uses: actions/checkout@v2
+      - name: Use Node.js 17.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17.x
+      - run: npm install
+      - run: npm run build
+      - run: npm run test
       - name: Install SSH KEY
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           know_hosts: ${{ secrets.SSH_HOST }}
       - name: PULL project
-        run: ssh julien@51.178.30.100 "cd /home/julien/web/ && /usr/bin/git pull origin master"
+        run: ssh julien@51.178.30.100 "cd /home/julien/web/ && /usr/bin/git/build pull origin master"
+
