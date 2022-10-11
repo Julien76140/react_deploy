@@ -23,9 +23,9 @@ jobs:
         uses: appleboy/scp-action@master
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: 270897
-          host: 51.178.30.100
-          username: julien
+          passphrase: ${{ secrets.PASSPHRASE }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.USERNAME }}
           port: 22
           source: "build/"
           target: "/home/julien/web"
